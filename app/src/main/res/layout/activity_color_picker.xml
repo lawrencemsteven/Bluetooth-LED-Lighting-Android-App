@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorPicker">
+
+    <Button
+        android:id="@+id/colorDisplay"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorDefault"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/redText"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="255"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorDisplay" />
+
+    <EditText
+        android:id="@+id/greenText"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="255"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redBar" />
+
+    <EditText
+        android:id="@+id/blueText"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="255"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenBar" />
+
+    <SeekBar
+        android:id="@+id/redBar"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:max="255"
+        android:progress="255"
+        android:thumb="@drawable/red_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redText" />
+
+    <SeekBar
+        android:id="@+id/greenBar"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:max="255"
+        android:progress="255"
+        android:thumb="@drawable/green_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greenText" />
+
+    <SeekBar
+        android:id="@+id/blueBar"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:max="255"
+        android:progress="255"
+        android:thumb="@drawable/blue_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueText" />
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:text="➤"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/redBar"
+        app:layout_constraintStart_toEndOf="@+id/redText"
+        app:layout_constraintTop_toTopOf="@+id/redText" />
+
+    <Button
+        android:id="@+id/greenButton"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:text="➤"
+        android:textColor="#00FF00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/greenBar"
+        app:layout_constraintStart_toEndOf="@+id/greenText"
+        app:layout_constraintTop_toTopOf="@+id/greenText" />
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:text="➤"
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/blueBar"
+        app:layout_constraintStart_toEndOf="@+id/blueText"
+        app:layout_constraintTop_toTopOf="@+id/blueText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
